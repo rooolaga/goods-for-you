@@ -1,2 +1,25 @@
 @import "reset";
+@import "fonts";
 @import "variables";
+@import "spacing";
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
