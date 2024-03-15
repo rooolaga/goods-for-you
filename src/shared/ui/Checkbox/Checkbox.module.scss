@@ -1,7 +1,6 @@
 .checkbox_container {
   position: relative;
   display: flex;
-  align-items: center;
 }
 
 .checkbox {
@@ -30,6 +29,7 @@
 .label {
   margin-left: 10px;
   font-size: 1em;
+  padding-top: 4px;
 }
 
 .checkbox:checked + .custom_checkbox {

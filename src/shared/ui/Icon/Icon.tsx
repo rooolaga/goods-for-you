@@ -16,9 +16,10 @@ export const Icon = ({
   width = 25,
   height = 25,
   onClick,
+  className,
   Svg,
 }: IconProps) => {
-  const icon = <Svg width={width} height={height} />;
+  const icon = <Svg width={width} height={height} className={className} />;
 
   if(clickable) return (
     <button onClick={onClick} className={cls.button}>

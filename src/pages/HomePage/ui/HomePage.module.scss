@@ -1,0 +1,33 @@
+.section {
+  padding: 60px 0;
+}
+
+.section_purple {
+  background-color: var(--purple);
+}
+
+.section_about {
+  padding: 0;
+  background-image: url('/src/shared/assets/images/bg_about.png');
+  background-repeat: no-repeat;
+  background-position-x: 14.5rem;
+}
+
+.section_hero {
+  padding: 100px 0 93px;
+  background-image: url('/src/shared/assets/images/bg_hero.png');
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 194px;
+}
+
+.about_container {
+  display: grid;
+  grid-template-columns: 1fr 680px;
+  column-gap: 44px;
+}
+
+.about_content {
+  padding-bottom: 149px;
+  align-self: end;
+}
