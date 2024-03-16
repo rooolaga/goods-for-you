@@ -1,20 +1,25 @@
 import { Text } from "@/shared/ui/Text";
-import TeamMate from "@/shared/assets/images/teammate1.jpg"
 import cls from './Temmate.module.scss'
+import clsx from "clsx";
 
-export interface TemmateProps {
+export interface TeammateProps {
   name: string;
   position: string;
+  src: string;
+  className?: string;
 }
 
 export const Teammate = ({
   name,
-  position
-}: TemmateProps) => {
+  position,
+  src,
+  className
+}: TeammateProps) => {
   return (
-    <div className={cls.temmate}>
-      <img src={TeamMate} alt="teammate 1" />
-      <div className={cls.temmate_info}>
+    <div className={clsx(cls.temmate, className)}>
+      <img src={src} alt="teammate 1" />
+      <div className={cls.temmate_overlay}></div>
+      <div className={clsx(cls.temmate_overlay, cls.temmate_info)}>
         <Text as='h4' color="white" wieght="bold">{name}</Text>
         <Text color="white" wieght="semibold">{position}</Text>
       </div>

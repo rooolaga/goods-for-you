@@ -3,16 +3,28 @@ import cls from './HomePage.module.scss';
 import { Text } from '@/shared/ui/Text';
 import clsx from 'clsx';
 import AboutImg from '@/shared/assets/images/man_in_sneakers.png';
+import TeamImg from '@/shared/assets/images/teammate2.jpg';
 import { Cite } from '@/shared/ui/Cite';
 import { Button } from '@/shared/ui/Button';
 import { Accordion } from '@/shared/ui/Accordion';
 import { Catalog } from '@/widgets/Catalog';
-import { Teammate } from '@/entities/Team';
+import { Team } from '@/entities/Team';
+import { MainLayout } from '@/widgets/MainLayout/ui/MainLayout';
+
+const team = [
+  {name: 'Maxim', position: 'Adming', src: TeamImg},
+  {name: 'Maxim', position: 'Adming', src: TeamImg},
+  {name: 'Maxim', position: 'Adming', src: TeamImg},
+  {name: 'Maxim', position: 'Adming', src: TeamImg},
+  {name: 'Maxim', position: 'Adming', src: TeamImg},
+  {name: 'Maxim', position: 'Adming', src: TeamImg},
+]
 
 export const HomePage = () => {
   return (
-    <>
-      <section className={clsx(cls.section_purple, cls.section_hero)}>
+    <MainLayout>
+      <>
+      <section className={clsx('section_purple', cls.section_hero)}>
         <div className="container">
           <Text as='h1' color='white' className='mb-4'>
             <>
@@ -32,13 +44,13 @@ export const HomePage = () => {
         </div>
       </section>
 
-      <section className={cls.section}>
+      <section className='section'>
         <div className="container">
           <Catalog />
         </div>
       </section>
       
-      <section className={clsx(cls.section, cls.section_purple, cls.section_about)}>
+      <section className={clsx('section', 'section_purple', cls.section_about)}>
         <div className={clsx('container', cls.about_container)}>
           <div className={clsx(cls.about_content, 'pl-1')}>
             <Text as='h2' color='white' wieght='bold' className='mb-2'>About us</Text>
@@ -55,21 +67,15 @@ export const HomePage = () => {
           </div>
         </div>
       </section>
+
       <section className={clsx(cls.section, 'pt-15', 'pb-15')}>
         <div className="container">
           <GoodsForYouQuiz />
         </div>
       </section>
-      <section className={cls.section_purple}>
+      <section className={clsx('section_purple', cls.section)}>
         <div className="container">
-          <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px'}}>
-            <Teammate name='Petr' position='Tsar' />
-            <Teammate name='Petr' position='Tsar' />
-            <Teammate name='Petr' position='Tsar' />
-            <Teammate name='Petr' position='Tsar' />
-            <Teammate name='Petr' position='Tsar' />
-            <Teammate name='Petr' position='Tsar' />
-          </div>
+          <Team items={team} title='Our team' />
         </div>
       </section>
       <section className={cls.section}>
@@ -84,5 +90,6 @@ export const HomePage = () => {
         </div>
       </section>
     </>
+    </MainLayout>
   );
 }

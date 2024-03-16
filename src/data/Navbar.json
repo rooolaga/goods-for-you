@@ -1,0 +1,36 @@
+{
+  "logo": {
+    "src": "/src/shared/assets/images/logo.png",
+    "alt": "Goods for you"
+  },
+  "items": [
+    {
+      "title": "Catalog",
+      "to": "/"
+    },
+    {
+      "title": "About us",
+      "to": "/"
+    },
+    {
+      "title": "Product selection",
+      "to": "/"
+    },
+    {
+      "title": "Our team",
+      "to": "/"
+    },
+    {
+      "title": "FAQ",
+      "to": "/"
+    },
+    {
+      "title": "For staff",
+      "to": "/"
+    }
+  ],
+  "aria": {
+    "logoLabel": "Visit Good For You homepage",
+    "navbarLabel": "Good For You navigation"
+  }
+}
