@@ -1,4 +1,20 @@
+@import '/src/app/styles/breakpoints';
+
 .filter {
   padding: 9px 20px;
+  align-self: start;
   background-color: var(--ivory);
+}
+
+.filter_contols {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  @include sm {
+    white-space: normal;
+  }
 }

@@ -1,3 +1,5 @@
+@import '/src/app/styles/breakpoints';
+
 .temmate {
   position: relative;
   display: flex;
@@ -34,4 +36,8 @@
   .temmate_info {
     opacity: 1;
   }
+}
+
+.img {
+  width: 100%;
 }

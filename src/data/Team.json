@@ -1,0 +1,35 @@
+{
+  "title": "Our team",
+  "teammates": [
+    {
+      "name": "Maxim",
+      "position": "Admin",
+      "src": "/src/shared/assets/images/teammate1.jpg"
+    },
+    {
+      "name": "Sasha",
+      "position": "Lorem, ipsum.",
+      "src": "/src/shared/assets/images/teammate2.jpg"
+    },
+    {
+      "name": "Dasha",
+      "position": "Iste, ad?",
+      "src": "/src/shared/assets/images/teammate3.jpg"
+    },
+    {
+      "name": "Dmitriy",
+      "position": "Possimus, perspiciatis.",
+      "src": "/src/shared/assets/images/teammate4.jpg"
+    },
+    {
+      "name": "Vitalic",
+      "position": "Suscipit, quasi.",
+      "src": "/src/shared/assets/images/teammate5.jpg"
+    },
+    {
+      "name": "Victoria",
+      "position": "Distinctio, ex!",
+      "src": "/src/shared/assets/images/teammate6.jpg"
+    }
+  ]
+}

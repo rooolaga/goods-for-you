@@ -4,6 +4,7 @@ import cls from './GoodForYouQuoz.module.scss'
 import { Button } from "@/shared/ui/Button"
 import { Checkbox } from "@/shared/ui/Checkbox"
 
+import {title, subtitle, stepTitle, typesList, nextButton} from '@/data/Quiz.json'
 
 type FormData = {
   productType: string[],
@@ -28,46 +29,27 @@ export const GoodsForYouQuiz = () => {
    */
 
   return (
-    <div className={cls.multistep_form}>
+    <form className={cls.multistep_form}>
       <div className={cls.header}>
-        <Text as='h2' wieght='bold'>We will select the perfect product for you</Text>
-        <Text as='span' color="gray">
-          Answer three questions and we will send you a catalog with the most suitable products for you.
+        <Text as='h2' wieght='bold' className="mb-2">{title}</Text>
+        <Text as='span' color="gray" wieght="semibold">
+          {subtitle}
         </Text>
       </div>
 
       <div className={cls.body}>
-        <Text as='h3' className="mb-8">What type of product are you considering?</Text>
+        <Text as='h3' className="mb-8" wieght="semibold">{stepTitle}</Text>
         <div className={cls.checkbox_list}>
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
-          <Checkbox label="sneakers" />
+          {typesList.map(({label}, index) => (
+            <Checkbox label={label} key={index}/>
+          ))}
         </div>
       </div>
 
       <div className={cls.footer}>
-        <Text as='span' color='gray'>1 of 2</Text>
-        <Button variant='outline' size='s'>Next step</Button>
+        <Text as='span' color='gray' wieght="semibold">1 of 2</Text>
+        <Button variant='outline' size='s'>{nextButton}</Button>
       </div>
-    </div>
+    </form>
   );
 }

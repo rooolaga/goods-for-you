@@ -1,4 +1,5 @@
 @import '/src/app/styles/breakpoints';
+
 @mixin burgerSpan {
   display: inline-block;
   position: absolute;
@@ -11,38 +12,11 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-
-  @include sm {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @include xs {
-    position: fixed;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding: 20px;
-    background-color: var(--purple);
-  }
 }
 
 .navbar_nav {
   display: flex;
   gap: 36px;
-
-  @include xs {
-    visibility: hidden;
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    background-color: var(--purple);
-    gap: 0;
-  }
 }
 
 .navlink {
@@ -60,16 +34,49 @@
     box-shadow: 12px 0px 0 rgba(255, 255, 255, 0.1), -12px 0px 0 rgba(255, 255, 255, 0.1);
     background-color: rgba(255, 255, 255, 0.1);
   }
+}
 
-  @include xs {
-    height: 50px;
+.main {
+  @include sm {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--purple);
+  }
+
+  .navbar_nav {
+    @include sm {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    @include sm {
+      visibility: hidden;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      background-color: var(--purple);
+      gap: 0;
+    }
+  }
+
+  .navlink {
+    @include sm {
+      height: 50px;
+    }
   }
 }
 
 .menu_btn {
   display: none;
 
-  @include xs {
+  @include sm {
     transition-duration: 0.25s;
     box-sizing: border-box;
     display: flex;
@@ -103,7 +110,7 @@
 
 .menu_toggle {
   display: none;
-  @include xs {
+  @include sm {
     opacity: 0;
   
     &:checked ~ .menu_btn > span {
@@ -123,8 +130,26 @@
     &:checked ~ .navbar_nav {
       visibility: visible;
       left: 0;
-      top: 73px;
+      top: 70px;
     }
   
+  }
+}
+
+.bottom {
+  @include sm {
+    flex-direction: column;
+
+    .navbar_nav {
+      padding: 20px 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 12px;
+    }
+
+    .navlink {
+      display: inline-block;
+      line-height: 30px;
+    }
   }
 }

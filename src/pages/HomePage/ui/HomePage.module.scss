@@ -1,9 +1,4 @@
-.section_about {
-  padding: 0;
-  background-image: url('/src/shared/assets/images/bg_about.png');
-  background-repeat: no-repeat;
-  background-position-x: 14.5rem;
-}
+@import '/src/app/styles/breakpoints';
 
 .section_hero {
   padding: 100px 0 93px;
@@ -13,13 +8,65 @@
   background-position-y: 194px;
 }
 
+.hero_container {
+  @include lg {
+    padding: 42px;
+  }
+}
+
+.section_about {
+  padding: 0;
+  background-image: url('/src/shared/assets/images/bg_about.png');
+  background-repeat: no-repeat;
+  background-position-x: 14.5rem;
+}
+
 .about_container {
   display: grid;
   grid-template-columns: 1fr 680px;
   column-gap: 44px;
+
+  @include lg {
+    grid-template-columns: 1fr 440px;
+  }
+
+  @include md {
+    grid-template-columns: 1fr;
+    img {
+      display: none;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 .about_content {
   padding-bottom: 149px;
   align-self: end;
+
+  @include lg {
+    padding: 42px;
+    align-self: center;
+  }
+}
+
+.section_team {
+  padding: 60px 0;
+  background-image: url('/src/shared/assets/images/bg_team.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.faq_container {
+  padding: 60px 150px 92px;
+
+  @include md {
+    padding: 50px 42px;
+  }
+}
+
+.faq_title {
+  margin-bottom: 26px;
 }

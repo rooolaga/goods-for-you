@@ -17,10 +17,11 @@
 
 .label {
   padding: 0 12px;
-  height: 57px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   outline: 1px solid var(--beige);
+  font-weight: 600;
 }

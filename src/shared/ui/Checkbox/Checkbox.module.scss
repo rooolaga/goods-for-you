@@ -28,8 +28,9 @@
 
 .label {
   margin-left: 10px;
-  font-size: 1em;
   padding-top: 4px;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 .checkbox:checked + .custom_checkbox {

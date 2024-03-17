@@ -2,94 +2,83 @@ import { GoodsForYouQuiz } from '@/features/GoodsForYouQuiz';
 import cls from './HomePage.module.scss';
 import { Text } from '@/shared/ui/Text';
 import clsx from 'clsx';
-import AboutImg from '@/shared/assets/images/man_in_sneakers.png';
-import TeamImg from '@/shared/assets/images/teammate2.jpg';
 import { Cite } from '@/shared/ui/Cite';
 import { Button } from '@/shared/ui/Button';
-import { Accordion } from '@/shared/ui/Accordion';
+import { Accordion, AccordionList } from '@/shared/ui/Accordion';
 import { Catalog } from '@/widgets/Catalog';
 import { Team } from '@/entities/Team';
 import { MainLayout } from '@/widgets/MainLayout/ui/MainLayout';
 
-const team = [
-  {name: 'Maxim', position: 'Adming', src: TeamImg},
-  {name: 'Maxim', position: 'Adming', src: TeamImg},
-  {name: 'Maxim', position: 'Adming', src: TeamImg},
-  {name: 'Maxim', position: 'Adming', src: TeamImg},
-  {name: 'Maxim', position: 'Adming', src: TeamImg},
-  {name: 'Maxim', position: 'Adming', src: TeamImg},
-]
+import hero from '@/data/Hero.json'
+import about from '@/data/About.json'
+import team from "@/data/Team.json"
+import faq from "@/data/FAQ.json"
 
 export const HomePage = () => {
   return (
     <MainLayout>
-      <>
+      
       <section className={clsx('section_purple', cls.section_hero)}>
-        <div className="container">
-          <Text as='h1' color='white' className='mb-4'>
-            <>
-              Any products from famous brands
-              <br />
-              with worldwide delivery
-            </>
-          </Text>
-          <Text as='p' color='white' wieght='semibold'>
-            <>
-              We sell smartphones, laptops, clothes, shoes
-              <br />
-              and many other products at low prices
-            </>
-          </Text>
-          <Button size='l' className='ml-4 mt-10'>Go to shopping</Button>
+        <div className={clsx("container", cls.hero_container)}>
+          <Text as='h1' color='white' className='mb-4'>{hero.title}</Text>
+          <Text as='p' color='white' wieght='semibold'>{hero.text}</Text>
+          <Button size='l' className='ml-4 mt-9'>{hero.button}</Button>
         </div>
       </section>
 
-      <section className='section'>
+      <section className='pt-13 pb-13'>
         <div className="container">
+          <Text as='h2' wieght='bold' className='mb-8'>Catalog</Text>
           <Catalog />
         </div>
       </section>
       
-      <section className={clsx('section', 'section_purple', cls.section_about)}>
+      <section className={clsx('section_purple', cls.section_about)}>
         <div className={clsx('container', cls.about_container)}>
           <div className={clsx(cls.about_content, 'pl-1')}>
-            <Text as='h2' color='white' wieght='bold' className='mb-2'>About us</Text>
-            <Cite author='Goods4you' color='white'>
-              <>
-                Every day a person has a choice what to spend his money on. Stores and websites offer an endless list of products.
-                <br />
-                But we will help you make the right choice!
-              </>
+            <Text as='h2' color='white' wieght='bold' className='mb-2'>
+              {about.title}
+            </Text>
+            <Cite author={about.author} color='white'>
+              {about.text}
             </Cite>
           </div>
           <div>
-            <img src={AboutImg} alt="Man in sneakers and orange socks" />
+            <img src={about.img.src} alt={about.img.alt} />
           </div>
         </div>
       </section>
 
-      <section className={clsx(cls.section, 'pt-15', 'pb-15')}>
+      <section className='pt-15 pb-15'>
         <div className="container">
           <GoodsForYouQuiz />
         </div>
       </section>
-      <section className={clsx('section_purple', cls.section)}>
+
+      <section className={clsx('section_purple', cls.section_team)}>
         <div className="container">
-          <Team items={team} title='Our team' />
+          <Team items={team.teammates} title={team.title} />
         </div>
       </section>
-      <section className={cls.section}>
-        <div className="container">
-          <Text as='h2' wieght='bold'>FAQ</Text>  
-          <Accordion title="Question 1">
-            Long answer to the first question
-          </Accordion>
-          <Accordion title="Question 2">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id sunt, illo officia tempora itaque ducimus ut, a praesentium aperiam velit omnis fuga eveniet qui ratione officiis, placeat at iusto facilis?
-          </Accordion>
+
+      <section>
+        <div className={clsx("container", cls.faq_container)}>
+          <Text as='h2' wieght='bold' className={cls.faq_title}>{faq.title}</Text>  
+          <AccordionList>
+            <Accordion title={faq.accordionOne.title}>
+              <Text as='p' color='gray' wieght='semibold'>
+                {faq.accordionOne.text}
+              </Text>
+            </Accordion>
+            <Accordion title={faq.accordionTwo.title}>
+              <Text as='p' color='gray' wieght='semibold'>
+                {faq.accordionTwo.text}
+              </Text>
+            </Accordion>
+          </AccordionList>
         </div>
       </section>
-    </>
+  
     </MainLayout>
   );
 }

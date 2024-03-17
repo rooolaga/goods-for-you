@@ -1,0 +1,37 @@
+{
+  "title": "Selection\nby parameters",
+  "categories": [
+    {
+      "value": "1",
+      "label": "smartphones"
+    },
+    {
+      "value": "2",
+      "label": "laptops"
+    },
+    {
+      "value": "3",
+      "label": "sneakers"
+    },
+    {
+      "value": "4",
+      "label": "sneakers"
+    },
+    {
+      "value": "5",
+      "label": "sneakers"
+    },
+    {
+      "value": "6",
+      "label": "sneakers"
+    },
+    {
+      "value": "7",
+      "label": "sneakers"
+    },
+    {
+      "value": "8",
+      "label": "sneakers"
+    }
+  ]
+}

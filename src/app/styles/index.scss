@@ -38,13 +38,9 @@ h4 {
     width: calc(100% - 24px);
   }
 
-  @include m {
+  @include lg {
     width: calc(100% - 24px);
   }
-}
-
-.section {
-  padding: 60px 0;
 }
 
 .section_purple {

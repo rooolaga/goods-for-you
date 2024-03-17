@@ -2,17 +2,11 @@ import { Text } from "@/shared/ui/Text"
 import cls from './CatalogFilter.module.scss'
 import { RadioGroup } from "@/shared/ui/RadioGroup"
 import { useState } from "react"
+import { Button } from "@/shared/ui/Button"
+import clsx from "clsx"
 
-const items = [
-  { value: '1', label: 'smartphones' },
-  { value: '2', label: 'laptops' },
-  { value: '3', label: 'sneakers' },
-  { value: '4', label: 'sneakers' },
-  { value: '5', label: 'sneakers' },
-  { value: '6', label: 'sneakers' },
-  { value: '7', label: 'sneakers' },
-  { value: '8', label: 'sneakers' },
-]
+import { categories, title } from '@/data/CatalogFilter.json'
+
 
 export const CatalogFilter = () => {
   const [category, setCategory] = useState<string | null>(null);
@@ -23,10 +17,15 @@ export const CatalogFilter = () => {
 
   return (
     <div className={cls.filter}>
-      <Text as='h3' wieght="semibold">
-        <>Selection<br />by parameters {category}</>
+      <Text as='h3' wieght="semibold" className={clsx(cls.title, "mb-7")}>
+        {title}
       </Text>
-      <RadioGroup name="category" label="Category" options={items} onChange={onCategoryChange}/>
+      <RadioGroup name="category" label="Category" options={categories} onChange={onCategoryChange}/>
+      <div className={cls.filter_contols}>
+        <Button variant="dark" size='l'>Apply</Button>
+        <Button variant="text" size='l'>Reset</Button>
+      </div>
+      
     </div>
   )
 }

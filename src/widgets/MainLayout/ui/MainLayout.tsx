@@ -18,14 +18,14 @@ export const MainLayout = ({
       
       <div className='section_purple'>
         <div className={clsx(cls.header, 'container pt-6 pb-2')}>
-          <Navbar logo={logo} items={items} aria={aria}/>
+          <Navbar logo={logo} items={items} aria={aria} variant='main' />
         </div>
       </div>
       
       <div className={cls.page}>{children}</div>
-      <div className='section_purple'>
-        <div className={clsx(cls.footer, 'container pt-6 pb-2')}>
-          <Navbar logo={logo} items={items} aria={aria}/>
+      <div className={cls.footer}>
+        <div className='container pt-6 pb-2'>
+          <Navbar logo={logo} items={items} aria={aria} variant='bottom'/>
         </div>
       </div>
     </div>
