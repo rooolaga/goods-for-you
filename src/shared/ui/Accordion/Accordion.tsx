@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { ReactElement, useId, useState } from "react";
 import { Text } from '../Text';
 import clsx from 'clsx';
 import cls from './Accordion.module.scss';
@@ -17,15 +17,27 @@ export const Accordion = ({
   isCollapsed = true
 }: AccordionProps) => {
 
+  const id = useId();
   const [isOpen, setIsOpen] = useState(!isCollapsed);
 
   return (
     <div className={clsx(cls.accordion_item, isOpen && cls.open)}>
-      <button className={cls.accordion_haeder} onClick={() => setIsOpen(prev => !prev)}>
+      <button 
+        id={id}
+        className={cls.accordion_haeder} 
+        onClick={() => setIsOpen(prev => !prev)}
+        aria-expanded={isOpen}
+        aria-controls={`panel${id}`}
+      >
         <Text as='h4'>{title}</Text>
         <div className={cls.accordion_icon}><Icon Svg={Cross} /></div>
       </button>
-      <div className={cls.accordion_collapse}>
+      <div 
+        id={`panel${id}`}
+        className={cls.accordion_collapse} 
+        aria-labelledby={id}
+        role="region"
+      >
         <div className={cls.accordion_body}>
           <div className={cls.accordion_content}>
             {children}

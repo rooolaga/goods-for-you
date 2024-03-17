@@ -44,7 +44,7 @@ export const HomePage = () => {
             </Cite>
           </div>
           <div>
-            <img src={about.img.src} alt={about.img.alt} />
+            <img src={about.img.src} alt={about.img.alt} loading="lazy"/>
           </div>
         </div>
       </section>

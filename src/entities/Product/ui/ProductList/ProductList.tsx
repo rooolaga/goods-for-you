@@ -10,6 +10,7 @@ export const ProductList = () => {
         <ProductCard 
           title={item.title}
           price={item.price}
+          src={item.src}
           key={`${item.title}_${index}`}
         />
       ))}

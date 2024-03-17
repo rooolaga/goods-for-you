@@ -5,7 +5,10 @@ import clsx from "clsx";
 export interface TeammateProps {
   name: string;
   position: string;
-  src: string;
+  src: {
+    jpg: string,
+    avif: string
+  };
   className?: string;
 }
 
@@ -17,7 +20,10 @@ export const Teammate = ({
 }: TeammateProps) => {
   return (
     <div className={clsx(cls.temmate, className)}>
-      <img src={src} alt="teammate 1" className={cls.img}/>
+      <picture>
+        <source srcSet={src.avif} type="image/avif" />
+        <img src={src.jpg} alt={name} className={cls.img} loading="lazy"/>
+      </picture>
       <div className={cls.temmate_overlay}></div>
       <div className={clsx(cls.temmate_overlay, cls.temmate_info)}>
         <Text as='h4' color="white" wieght="bold" className="mb-2">{name}</Text>

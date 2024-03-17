@@ -36,7 +36,7 @@ export const Navbar = ({
     <nav className={clsx(cls.navbar, cls[variant])}>
       <div className="navbar_brand">
         <NavLink to='/'>
-          <img src={logo.src} alt={logo.alt} />
+          <img src={logo.src} alt={logo.alt} loading="lazy"/>
           <span className="visuallyhidden">{aria.logoLabel}</span>
         </NavLink>
       </div>

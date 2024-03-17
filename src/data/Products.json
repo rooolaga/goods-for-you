@@ -1,38 +1,74 @@
 [
   {
     "title": "Nike Air Force 1 '07 QS",
-    "price": 110
+    "price": 110,
+    "src": {
+      "jpg": "/src/shared/assets/images/sneakers.jpg",
+      "avif": "/src/shared/assets/images/sneakers.avif"
+    }
   },
   {
     "title": "Nike Air Force 1 '07 QS",
-    "price": 110
+    "price": 110,
+    "src": {
+      "jpg": "/src/shared/assets/images/sneakers.jpg",
+      "avif": "/src/shared/assets/images/sneakers.avif"
+    }
   },
   {
     "title": "Nike Air Force 1 '07 QS",
-    "price": 110
+    "price": 110,
+    "src": {
+      "jpg": "/src/shared/assets/images/sneakers.jpg",
+      "avif": "/src/shared/assets/images/sneakers.avif"
+    }
   },
   {
     "title": "Nike Air Force 1 '07 QS",
-    "price": 110
+    "price": 110,
+    "src": {
+      "jpg": "/src/shared/assets/images/sneakers.jpg",
+      "avif": "/src/shared/assets/images/sneakers.avif"
+    }
   },
   {
     "title": "Nike Air Force 1 '07 QS",
-    "price": 110
+    "price": 110,
+    "src": {
+      "jpg": "/src/shared/assets/images/sneakers.jpg",
+      "avif": "/src/shared/assets/images/sneakers.avif"
+    }
   },
   {
     "title": "Nike Air Force 1 '07 QS",
-    "price": 110
+    "price": 110,
+    "src": {
+      "jpg": "/src/shared/assets/images/sneakers.jpg",
+      "avif": "/src/shared/assets/images/sneakers.avif"
+    }
   },
   {
     "title": "Nike Air Force 1 '07 QS",
-    "price": 110
+    "price": 110,
+    "src": {
+      "jpg": "/src/shared/assets/images/sneakers.jpg",
+      "avif": "/src/shared/assets/images/sneakers.avif"
+    }
   },
   {
     "title": "Nike Air Force 1 '07 QS",
-    "price": 110
+    "price": 110,
+    "src": {
+      "jpg": "/src/shared/assets/images/sneakers.jpg",
+      "avif": "/src/shared/assets/images/sneakers.avif"
+    }
   },
   {
     "title": "Nike Air Force 1 '07 QS",
-    "price": 110
+    "price": 110,
+    "src": {
+      "jpg": "/src/shared/assets/images/sneakers.jpg",
+      "avif": "/src/shared/assets/images/sneakers.avif"
+    }
   }
 ]
