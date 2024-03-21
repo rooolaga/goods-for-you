@@ -26,8 +26,8 @@ export const Teammate = ({
       </picture>
       <div className={cls.temmate_overlay}></div>
       <div className={clsx(cls.temmate_overlay, cls.temmate_info)}>
-        <Text as='h4' color="white" wieght="bold" className="mb-2">{name}</Text>
-        <Text color="white" wieght="semibold">{position}</Text>
+        <Text as='h4' color="white" weight="bold" className="mb-2">{name}</Text>
+        <Text color="white" weight="semibold">{position}</Text>
       </div>
     </div>
   )

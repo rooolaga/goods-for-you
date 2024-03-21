@@ -16,10 +16,10 @@ export const Cite = ({
 }: CiteProps) => {
   return (
     <div>
-      <Text as='p' color={color} wieght="semibold" className="pr-20">
+      <Text as='p' color={color} weight="semibold" className="pr-20">
         {children}
       </Text>
-      <Text as='h4' color={color} wieght="semibold" className={cls.author}>
+      <Text as='h4' color={color} weight="semibold" className={cls.author}>
         <>
           <Icon Svg={LineIcon} width={50} className="pr-5"/>
           {author}

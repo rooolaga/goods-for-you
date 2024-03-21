@@ -23,7 +23,7 @@ export const RadioGroup = ({
   return (
     <div>
       <div>
-        <Text wieght='semibold'>{label}</Text>
+        <Text weight='semibold'>{label}</Text>
       </div>
       <div className={cls.radio_group}>
         {options.map(option => (

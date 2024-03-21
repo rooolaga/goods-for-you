@@ -17,7 +17,7 @@ export const CatalogFilter = () => {
 
   return (
     <div className={cls.filter}>
-      <Text as='h3' wieght="semibold" className={clsx(cls.title, "mb-7")}>
+      <Text as='h3' weight="semibold" className={clsx(cls.title, "mb-7")}>
         {title}
       </Text>
       <RadioGroup name="category" label="Category" options={categories} onChange={onCategoryChange}/>

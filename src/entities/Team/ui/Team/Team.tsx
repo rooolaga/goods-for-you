@@ -21,7 +21,7 @@ export const Team = ({
 }: TeamProps) => {
   return (
     <div>
-      <Text as='h2' color='white' wieght='bold'>
+      <Text as='h2' color='white' weight='bold'>
         {title}
       </Text>
       <div className={cls.team}>

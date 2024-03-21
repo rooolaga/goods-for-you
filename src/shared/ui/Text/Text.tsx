@@ -5,7 +5,7 @@ import { ReactNode } from 'react';
 export interface TextProps {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span',
   color?: 'white' | 'dark' | 'gray',
-  wieght?: 'regular' | 'semibold' | 'bold',
+  weight?: 'regular' | 'semibold' | 'bold',
   children?: ReactNode,
   className?: string | undefined
 }
@@ -13,7 +13,7 @@ export interface TextProps {
 export const Text = ({
   as = 'span',
   color = 'dark',
-  wieght = 'regular',
+  weight = 'regular',
   children,
   className
 }: TextProps) => {
@@ -22,7 +22,7 @@ export const Text = ({
     className,
     cls.text,
     cls[color],
-    cls[wieght]
+    cls[weight]
   );
 
   return (

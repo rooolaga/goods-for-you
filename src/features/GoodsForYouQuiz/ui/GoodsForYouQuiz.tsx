@@ -31,14 +31,14 @@ export const GoodsForYouQuiz = () => {
   return (
     <form className={cls.multistep_form}>
       <div className={cls.header}>
-        <Text as='h2' wieght='bold' className="mb-2">{title}</Text>
-        <Text as='span' color="gray" wieght="semibold">
+        <Text as='h2' weight='bold' className="mb-2">{title}</Text>
+        <Text as='span' color="gray" weight="semibold">
           {subtitle}
         </Text>
       </div>
 
       <div className={cls.body}>
-        <Text as='h3' className="mb-8" wieght="semibold">{stepTitle}</Text>
+        <Text as='h3' className="mb-8" weight="semibold">{stepTitle}</Text>
         <div className={cls.checkbox_list}>
           {typesList.map(({label}, index) => (
             <Checkbox label={label} key={index}/>
@@ -47,7 +47,7 @@ export const GoodsForYouQuiz = () => {
       </div>
 
       <div className={cls.footer}>
-        <Text as='span' color='gray' wieght="semibold">1 of 2</Text>
+        <Text as='span' color='gray' weight="semibold">1 of 2</Text>
         <Button variant='outline' size='s'>{nextButton}</Button>
       </div>
     </form>

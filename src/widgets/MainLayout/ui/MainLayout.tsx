@@ -4,6 +4,7 @@ import { Navbar } from '@/widgets/Navbar';
 import clsx from 'clsx';
 
 import { logo, items, aria} from '@/data/Navbar.json'
+import { useAnchors } from "@/widgets/MainLayout/hooks/useAnchors";
 
 
 export interface MainLayoutProps {
@@ -13,15 +14,18 @@ export interface MainLayoutProps {
 export const MainLayout = ({
   children
 }: MainLayoutProps) => {
+
+  useAnchors();
+
   return (
     <div className={cls.main_layout}>
-      
+
       <div className='section_purple'>
         <div className={clsx(cls.header, 'container pt-6 pb-2')}>
           <Navbar logo={logo} items={items} aria={aria} variant='main' />
         </div>
       </div>
-      
+
       <div className={cls.page}>{children}</div>
       <div className={cls.footer}>
         <div className='container pt-6 pb-2'>

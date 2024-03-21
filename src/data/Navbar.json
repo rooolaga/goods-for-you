@@ -6,27 +6,27 @@
   "items": [
     {
       "title": "Catalog",
-      "to": "/"
+      "to": "/#catalog"
     },
     {
       "title": "About us",
-      "to": "/"
+      "to": "/#about"
     },
     {
       "title": "Product selection",
-      "to": "/"
+      "to": "/#product_selection"
     },
     {
       "title": "Our team",
-      "to": "/"
+      "to": "/#team"
     },
     {
       "title": "FAQ",
-      "to": "/"
+      "to": "/#faq"
     },
     {
       "title": "For staff",
-      "to": "/"
+      "to": "/staff"
     }
   ],
   "aria": {
