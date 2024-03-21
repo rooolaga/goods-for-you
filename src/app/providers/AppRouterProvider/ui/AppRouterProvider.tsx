@@ -2,6 +2,7 @@ import { HomePage } from "@/pages/HomePage";
 import { SearchPage } from "@/pages/SearchPage";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ProductPage } from "@/pages/ProductPage";
+import { NotFoundPage } from "@/pages/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/product",
     element: <ProductPage/>
+  },
+  {
+    path: "*",
+    element: <NotFoundPage/>
   }
 ]);
 
