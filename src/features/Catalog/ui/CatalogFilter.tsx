@@ -6,11 +6,11 @@ import { Button } from "@/shared/ui/Button"
 import clsx from "clsx"
 
 import { categories, title } from '@/data/CatalogFilter.json'
-
+import { useGetAllCategoriesQuery } from "@/entities/Product";
 
 export const CatalogFilter = () => {
   const [category, setCategory] = useState<string | null>(null);
-
+  const categories = useGetAllCategoriesQuery();
   const onCategoryChange = (value: string) => {
     setCategory(value);
   }
@@ -20,12 +20,14 @@ export const CatalogFilter = () => {
       <Text as='h3' weight="semibold" className={clsx(cls.title, "mb-7")}>
         {title}
       </Text>
-      <RadioGroup name="category" label="Category" options={categories} onChange={onCategoryChange}/>
+      { categories.data && (
+        <RadioGroup name="category" label="Category" options={categories.data} onChange={onCategoryChange}/>
+      )}
       <div className={cls.filter_contols}>
         <Button variant="dark" size='l'>Apply</Button>
         <Button variant="text" size='l'>Reset</Button>
       </div>
-      
+
     </div>
   )
 }

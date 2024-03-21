@@ -1,9 +1,12 @@
 import './styles/index.scss'
 import { AppRouterProvider } from './providers/AppRouterProvider'
+import { StoreProvider } from "@/app/providers/StoreProvider";
 
 function App() {
   return (
-    <AppRouterProvider />
+    <StoreProvider>
+      <AppRouterProvider />
+    </StoreProvider>
   );
 }
 
