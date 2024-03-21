@@ -29,6 +29,7 @@
       "to": "/staff"
     }
   ],
+  "backLink": "Back to site",
   "aria": {
     "logoLabel": "Visit Good For You homepage",
     "navbarLabel": "Good For You navigation"

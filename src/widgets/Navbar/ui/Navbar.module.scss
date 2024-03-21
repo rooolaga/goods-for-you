@@ -28,6 +28,7 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
+  cursor: pointer;
   transition: 0.4s;
 
   &:hover {
@@ -52,7 +53,7 @@
       flex-direction: column;
       align-items: stretch;
     }
-  
+
     @include sm {
       visibility: hidden;
       position: fixed;
@@ -112,27 +113,27 @@
   display: none;
   @include sm {
     opacity: 0;
-  
+
     &:checked ~ .menu_btn > span {
       transform: rotate(45deg);
     }
-  
+
     &:checked ~ .menu_btn > span::before {
       top: 0;
       transform: rotate(0);
     }
-  
+
     &:checked ~ .menu_btn > span::after {
       top: 0;
       transform: rotate(90deg);
     }
-  
+
     &:checked ~ .navbar_nav {
       visibility: visible;
       left: 0;
       top: 70px;
     }
-  
+
   }
 }
 
