@@ -16,7 +16,7 @@
 
   &:focus + .label,
   &:hover + .label{
-    box-shadow: 0px 0px 10px var(--beige);
+    box-shadow: 0 0 10px var(--beige);
   }
 }
 
@@ -26,6 +26,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  line-height: 1.1rem;
   cursor: pointer;
   outline: 1px solid var(--beige);
   font-weight: 600;
