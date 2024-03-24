@@ -11,6 +11,16 @@
   font-size: 20px;
 }
 
+.img_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 293px;
+  border-radius: 4px;
+  background: #f2f0f3;
+}
+
 .img {
-    width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }

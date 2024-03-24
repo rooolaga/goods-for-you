@@ -1,6 +1,6 @@
 import { Skeleton } from "@/shared/ui/Skeleton";
 
-export const CatalogFilterSkeleton = () => {
+export const ProductFilterSkeleton = () => {
   return (
     <div>
       <Skeleton height={70} className="mb-7"/>

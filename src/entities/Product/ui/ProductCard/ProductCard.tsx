@@ -2,10 +2,7 @@ import cls from './ProductCard.module.scss'
 export interface ProductCardProps {
   title: string;
   price: number;
-  src: {
-    jpg: string,
-    avif: string
-  };
+  src: string;
 }
 
 export const ProductCard = ({
@@ -15,10 +12,9 @@ export const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <div>
-      <picture>
-        <source srcSet={src.avif} type="image/avif" />
-        <img src={src.jpg} className={cls.img} alt={title} loading="lazy"/>
-      </picture>
+      <div className={cls.img_wrapper}>
+        <img src={src} className={cls.img} alt={title} loading="lazy"/>
+      </div>
       <h3 className={cls.name}>{title}</h3>
       <div className={cls.price}>{price} $</div>
     </div>

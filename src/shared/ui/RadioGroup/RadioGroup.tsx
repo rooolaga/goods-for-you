@@ -5,6 +5,7 @@ import cls from './RadioGroup.module.scss'
 export interface RadioGroupProps {
   name: string;
   label: string;
+  value: string | undefined;
   options: string[],
   onChange?: ((value: string) => void);
 }
@@ -13,6 +14,7 @@ export const RadioGroup = ({
   options,
   name,
   label,
+  value,
   onChange
 }: RadioGroupProps) => {
   return (
@@ -21,12 +23,13 @@ export const RadioGroup = ({
         <Text weight='semibold'>{label}</Text>
       </div>
       <div className={cls.radio_group}>
-        {options.map((option, index) => (
+        {options.map((option) => (
           <Radio
             name={name}
-            value={index.toString()}
+            value={option}
             label={option}
             key={option}
+            checked={value === option}
             onChange={onChange}
           />
         ))}
