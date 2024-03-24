@@ -39,8 +39,8 @@ export const ProductSlider = ({
 
   return (
     <Slider {...sliderSetting}>
-      {images.map(item => (
-        <div>
+      {images.map((item, index) => (
+        <div key={index}>
           <div className={cls.slider_img_wrapper}>
             <img src={item} alt={alt}  className={cls.slider_img}/>
           </div>

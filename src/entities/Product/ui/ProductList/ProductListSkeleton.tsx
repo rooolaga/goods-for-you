@@ -11,7 +11,7 @@ export const ProductListSkeleton = ({
 }: ProductListSkeletonProps) => {
   return (
     <div className={cls.product_list}>
-      {range(count).map(() => (<ProductCardSkeleton />))}
+      {range(count).map((item) => (<ProductCardSkeleton key={item}/>))}
     </div>
   );
 };
