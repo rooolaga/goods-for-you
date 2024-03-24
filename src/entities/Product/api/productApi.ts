@@ -6,9 +6,18 @@ export const productApi = baseApi.injectEndpoints({
       query: () => 'products/categories'
     }),
     getAllProducts: build.query({
-      query: ({skip, category}) => {
+      query: ({limit, skip, category, search}) => {
         const categoryParam = category ? `/category/${category}` : '';
-        return `products${categoryParam}?limit=9&skip=${skip}`
+        const searchPama = search ? `/search` : '';
+        `products${categoryParam}${searchPama}?limit=${limit}&skip=${skip}`
+        return {
+          url: `products${categoryParam}${searchPama}`,
+          params: {
+            limit,
+            skip,
+            q: search
+          }
+        }
       },
       serializeQueryArgs: ({endpointName}) => {
         return endpointName;

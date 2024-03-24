@@ -8,13 +8,15 @@ export interface ProductListProps {
   limit: number;
   page: number;
   category: string | undefined;
+  search: string | undefined;
   onLoadMore: (val) => void;
 }
 
 export const ProductList = ({
   limit,
   page,
-  category,
+  category = undefined,
+  search = undefined,
   onLoadMore
 }: ProductListProps) => {
   const {
@@ -22,7 +24,7 @@ export const ProductList = ({
     isLoading,
     error,
     isFetching
-  } = useGetAllProductsQuery({skip: page * limit, category: category});
+  } = useGetAllProductsQuery({limit, skip: page * limit, category, search});
 
   const handleLoadMore = () => {
     onLoadMore(page + 1);
