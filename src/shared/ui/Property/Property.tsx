@@ -15,8 +15,8 @@ export const Property = ({
   children,
 }: PropertyProps) => {
   return (
-    <div className={clsx(cls.property, {}, [className])}>
-      <Text weight="semibold" color="light" className="mr-5">
+    <div className={clsx(cls.property, className, 'mb-6')}>
+      <Text weight="semibold" color="gray" className="mr-5">
         {label}
       </Text>
       <Text weight="semibold">{children}</Text>

@@ -38,6 +38,7 @@ export const ProductList = ({
       <div className={cls.product_list}>
         {data.products.map((item) => (
           <ProductCard
+            id={item.id}
             title={item.title}
             price={item.price}
             src={item.thumbnail}

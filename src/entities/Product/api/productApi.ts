@@ -34,11 +34,14 @@ export const productApi = baseApi.injectEndpoints({
         return currentArg !== previousArg
       }
     }),
+    getProduct: build.query({
+      query: (id) => `products/${id}`
+    })
   })
 });
 
 export const {
   useGetAllCategoriesQuery,
   useGetAllProductsQuery,
-  useLazyGetAllProductsQuery,
+  useGetProductQuery,
 } = productApi;
