@@ -1,0 +1,53 @@
+{
+  "title": "Our team",
+  "teammates": [
+    {
+      "name": "Maxim",
+      "position": "Admin",
+      "src": {
+        "jpg": "/src/shared/assets/images/teammate1.jpg",
+        "avif": "/src/shared/assets/images/teammate1.avif"
+      }
+    },
+    {
+      "name": "Sasha",
+      "position": "Lorem, ipsum.",
+      "src": {
+        "jpg": "/src/shared/assets/images/teammate2.jpg",
+        "avif": "/src/shared/assets/images/teammate2.avif"
+      }
+    },
+    {
+      "name": "Dasha",
+      "position": "Iste, ad?",
+      "src": {
+        "jpg": "/src/shared/assets/images/teammate3.jpg",
+        "avif": "/src/shared/assets/images/teammate3.avif"
+      }
+    },
+    {
+      "name": "Dmitriy",
+      "position": "Possimus, perspiciatis.",
+      "src": {
+        "jpg": "/src/shared/assets/images/teammate4.jpg",
+        "avif": "/src/shared/assets/images/teammate4.avif"
+      }
+    },
+    {
+      "name": "Vitalic",
+      "position": "Suscipit, quasi.",
+      "src": {
+        "jpg": "/src/shared/assets/images/teammate5.jpg",
+        "avif": "/src/shared/assets/images/teammate5.avif"
+      }
+    },
+    {
+      "name": "Victoria",
+      "position": "Distinctio, ex!",
+      "src": {
+        "jpg": "/src/shared/assets/images/teammate1.jpg",
+        "avif": "/src/shared/assets/images/teammate1.avif"
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+@import '/src/app/styles/breakpoints';
+
+.multistep_form {
+  padding: 40px 100px;
+  background-color: var(--ivory);
+  border-radius: 4px;
+
+  @include sm {
+    padding: 40px 42px;
+  }
+}
+
+.header {
+  padding-bottom: 1px;
+  border-bottom: 1px solid var(--gray);
+}
+
+.body {
+  padding: 20px 0 57px;
+}
+
+.footer {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--gray);
+}
+
+.checkbox_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 25px;
+  column-gap: 80px;
+
+  @include md {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+  }
+
+  @include sm {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+}

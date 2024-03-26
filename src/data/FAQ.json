@@ -1,0 +1,11 @@
+{
+  "title": "FAQ",
+  "accordionOne": {
+    "title": "Question 1",
+    "text": "Long answer to the first question"
+  },
+  "accordionTwo": {
+    "title": "Question 2",
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id sunt, illo officia tempora itaque ducimus ut, a praesentium aperiam velit omnis fuga eveniet qui ratione officiis, placeat at iusto facilis?"
+  } 
+}

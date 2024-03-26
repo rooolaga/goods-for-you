@@ -1,0 +1,30 @@
+{
+  "title": "We will select the perfect product for you",
+  "subtitle": "Answer three questions and we will send you a catalog with the most suitable products for you.",
+  "stepTitle": "What type of product are you considering?",
+  "typesList": [
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"},
+    {"label": "sneakers"}
+  ],
+  "nextButton": "Next step"
+}

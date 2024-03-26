@@ -1,0 +1,18 @@
+@import '/src/app/styles/breakpoints';
+
+.name {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.price {
+  margin-top: 2px;
+  font-size: 20px;
+}
+
+.img {
+  @include lg {
+    width: 100%;
+  }
+}

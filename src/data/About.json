@@ -1,0 +1,9 @@
+{
+  "title": "About us",
+  "text": "Every day a person has a choice what to spend his money on. Stores and websites offer an endless list of products.\nBut we will help you make the right choice!",
+  "author": "Goods4you",
+  "img": {
+    "src": "/src/shared/assets/images/man_in_sneakers.png",
+    "alt": "Man in sneakers and orange socks"
+  }
+}

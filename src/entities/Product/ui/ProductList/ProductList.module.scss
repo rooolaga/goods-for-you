@@ -1,0 +1,12 @@
+@import '/src/app/styles/breakpoints';
+
+.product_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 12px;
+
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+  }
+}

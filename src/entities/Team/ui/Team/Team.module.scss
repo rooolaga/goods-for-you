@@ -1,0 +1,68 @@
+@import '/src/app/styles/breakpoints';
+
+.team {
+  margin: 27px 0 75px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(9, 85px);
+  gap: 20px;
+
+  @include lg {
+    grid-template-rows: repeat(9, 65px);
+  }
+
+  @include md {
+    grid-template-rows: repeat(9, 40px);
+  }
+
+  @include sm {
+    grid-template-rows: repeat(9, 28px);
+  }
+
+  @include xs {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+.teammate_0 {
+  grid-row: 1 / 5;
+  grid-column: 1 / 2;
+}
+
+.teammate_1 {
+  grid-row: 2 / 6;
+  grid-column: 2 / 3;
+}
+
+.teammate_2 {
+  grid-row: 1 / 5;
+  grid-column: 3 / 4;
+}
+
+.teammate_3 {
+  grid-row: 5 / 9;
+  grid-column: 1 / 2;
+}
+
+.teammate_4 {
+  grid-row: 6 / 10;
+  grid-column: 2 / 3;
+}
+
+.teammate_5 {
+  grid-row: 5 / 9;
+  grid-column: 3 / 4;
+}
+
+@include xs {
+  .teammate_0, 
+  .teammate_1,
+  .teammate_2,
+  .teammate_3,
+  .teammate_4,
+  .teammate_5 {
+    grid-row: unset;
+    grid-column: unset;
+  }
+}
