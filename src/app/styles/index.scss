@@ -30,15 +30,15 @@ h4 {
   width: 1180px;
   margin: 0 auto;
 
-  @include xs {
+  @include phone {
     width: calc(100% - 24px);
   }
 
-  @include sm {
+  @include tablet-small {
     width: calc(100% - 24px);
   }
 
-  @include lg {
+  @include laptop {
     width: calc(100% - 24px);
   }
 }

@@ -9,7 +9,7 @@
 }
 
 .hero_container {
-  @include lg {
+  @include laptop {
     padding: 42px;
   }
 }
@@ -26,11 +26,11 @@
   grid-template-columns: 1fr 680px;
   column-gap: 44px;
 
-  @include lg {
+  @include laptop {
     grid-template-columns: 1fr 440px;
   }
 
-  @include md {
+  @include tablet {
     grid-template-columns: 1fr;
     img {
       display: none;
@@ -46,7 +46,7 @@
   padding-bottom: 149px;
   align-self: end;
 
-  @include lg {
+  @include laptop {
     padding: 42px;
     align-self: center;
   }
@@ -62,7 +62,7 @@
 .faq_container {
   padding: 60px 150px 92px;
 
-  @include md {
+  @include tablet {
     padding: 50px 42px;
   }
 }
