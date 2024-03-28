@@ -1,0 +1,38 @@
+.title_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+}
+
+.editable_prop {
+  padding-top: 0;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  font-weight: 600;
+
+  label {
+    position: static;
+    margin-right: 20px;
+    min-width: 240px;
+    transition: min-width 0.5s;
+  }
+
+  input:focus + label{
+    position: static;
+  }
+
+  input[readonly] {
+    padding: 0;
+    width: auto;
+    height: 24px;
+    line-height: 24px;
+    background: none;
+
+    & + label {
+      min-width: 10px;
+      width: auto;
+    }
+  }
+}
