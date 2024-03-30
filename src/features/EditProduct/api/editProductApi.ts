@@ -1,6 +1,6 @@
 import { baseApi } from "@/shared/api/baseApi";
 
-export const productApi = baseApi.injectEndpoints({
+export const editProductApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     updateProduct: build.mutation({
       query: ({ id, ...patch }) => ({
@@ -26,4 +26,4 @@ export const productApi = baseApi.injectEndpoints({
 
 export const {
   useUpdateProductMutation,
-} = productApi;
+} = editProductApi;
