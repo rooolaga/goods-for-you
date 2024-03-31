@@ -5,7 +5,7 @@
   background-color: var(--ivory);
   border-radius: 4px;
 
-  @include sm {
+  @include tablet-small {
     padding: 40px 42px;
   }
 }
@@ -33,12 +33,12 @@
   row-gap: 25px;
   column-gap: 80px;
 
-  @include md {
+  @include tablet {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 40px;
   }
 
-  @include sm {
+  @include tablet-small {
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
   }

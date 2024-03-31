@@ -14,7 +14,7 @@
 }
 
 .title {
-  @include sm {
+  @include tablet-small {
     white-space: normal;
   }
 }

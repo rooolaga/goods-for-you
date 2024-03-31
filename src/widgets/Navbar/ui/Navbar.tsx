@@ -1,6 +1,7 @@
 import { NavLink, To } from 'react-router-dom'
 import cls from './Navbar.module.scss'
 import { useId } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import clsx from 'clsx';
 
 export interface LogoType {
@@ -31,6 +32,13 @@ export const Navbar = ({
 }: NavbarProps) => {
 
   const id = useId();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHomePage = location.pathname === '/';
+
+  const handleBackClick = () => {
+    navigate(location.key !== "default" ? -1 : '/');
+  }
 
   return (
     <nav className={clsx(cls.navbar, cls[variant])}>
@@ -51,13 +59,26 @@ export const Navbar = ({
       )}
 
       <ul className={cls.navbar_nav} role="menubar" aria-label={aria.navbarLabel}>
-        {items.map((item, index) => (
+        {isHomePage && items.map((item, index) => (
           <li role='none' key={index}>
             <NavLink to={item.to} className={cls.navlink} role='menuitem'>
               {item.title}
             </NavLink>
           </li>
         ))}
+
+        {!isHomePage && (
+          <li role='none' key="backlink">
+            <span
+              className={cls.navlink}
+              role='menuitem'
+              tabIndex={0}
+              onClick={handleBackClick}
+            >
+              Back to site
+            </span>
+          </li>
+        )}
       </ul>
     </nav>
   )

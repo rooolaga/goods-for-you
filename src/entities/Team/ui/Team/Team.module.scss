@@ -7,19 +7,19 @@
   grid-template-rows: repeat(9, 85px);
   gap: 20px;
 
-  @include lg {
+  @include laptop {
     grid-template-rows: repeat(9, 65px);
   }
 
-  @include md {
+  @include tablet {
     grid-template-rows: repeat(9, 40px);
   }
 
-  @include sm {
+  @include tablet-small {
     grid-template-rows: repeat(9, 28px);
   }
 
-  @include xs {
+  @include phone {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }
@@ -55,8 +55,8 @@
   grid-column: 3 / 4;
 }
 
-@include xs {
-  .teammate_0, 
+@include phone {
+  .teammate_0,
   .teammate_1,
   .teammate_2,
   .teammate_3,

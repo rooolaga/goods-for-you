@@ -5,25 +5,28 @@ export interface RadioProps {
   label?: string;
   name: string;
   value: string;
-  onChange?: (value: string) => void;
+  checked: boolean;
+  onChange?: ((value: string) => void) | undefined;
 }
 
 export const Radio = ({
   label,
   value,
   name,
+  checked,
   onChange
 }: RadioProps) => {
-  
+
   const id = useId();
 
   return (
     <label htmlFor={id} className={cls.radio_container}>
-      <input 
-        className={cls.radio} 
+      <input
+        className={cls.radio}
         type="radio" id={id}
         name={name}
-        onChange={() => onChange?.(value)} 
+        checked={checked}
+        onChange={() => onChange?.(value)}
       />
       <span className={cls.label}>{label}</span>
     </label>
