@@ -1,7 +1,6 @@
 .input {
   position: relative;
   padding: 24px 0 0;
-  margin-top: 10px;
 }
 
 .input_field {
@@ -15,7 +14,7 @@
   outline: 0;
   color: var(--dark);
   background: var(--light);
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, height 0.5s;
 }
 
 .input_field::placeholder {
@@ -28,20 +27,25 @@
 }
 
 .label,
-.input_field:focus ~ .label {
+.input_field:focus + label {
   position: absolute;
   left: 20px;
   top: 0;
   display: block;
-  transition: 0.2s;
+  white-space: nowrap;
+  transition: top 0.2s, left 0.2s;
   color: var(--gray);
 }
 
-.input_field:focus ~ .label {
+.input_field:focus ~ label {
   color: var(--purple);
 }
 
 .input_field:focus {
   border-color: var(--purpleLight);
   box-shadow: 0 0 6px var(--purpleLight);
+}
+
+.input_field[readonly] {
+  pointer-events: none;
 }

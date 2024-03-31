@@ -2,12 +2,16 @@
 
 .multistep_form {
   padding: 40px 100px;
-  background-color: var(--ivory);
   border-radius: 4px;
+  background-color: var(--ivory);
 
   @include tablet-small {
     padding: 40px 42px;
   }
+}
+
+.isActive {
+  width: 100%;
 }
 
 .header {
@@ -42,4 +46,22 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
   }
+}
+
+.step {
+  display: none;
+  transition: display 0.5s;
+}
+
+.active_step {
+  display: block;
+}
+
+.recommended {
+  padding: 35px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  border-radius: 4px;
+  background-color: var(--beige);
 }

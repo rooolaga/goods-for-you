@@ -15,12 +15,12 @@ export const InputText = ({
   const id = useId();
 
   return (
-    <div className={cls.input}>
-      <input 
-        type="text" 
-        id={id} 
-        className={clsx(cls.input_field, className)} 
-        placeholder={label} 
+    <div className={clsx(cls.input, className)}>
+      <input
+        type="text"
+        id={id}
+        className={cls.input_field}
+        placeholder={label}
         {...props}
       />
       <label htmlFor={id} className={cls.label}>{label}</label>

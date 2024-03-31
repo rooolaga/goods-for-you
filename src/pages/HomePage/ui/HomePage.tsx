@@ -1,4 +1,3 @@
-import { GoodsForYouQuiz } from '@/features/GoodsForYouQuiz';
 import cls from './HomePage.module.scss';
 import { Text } from '@/shared/ui/Text';
 import clsx from 'clsx';
@@ -13,6 +12,8 @@ import hero from '@/data/Hero.json'
 import about from '@/data/About.json'
 import team from "@/data/Team.json"
 import faq from "@/data/FAQ.json"
+import { QuizRecommend } from "@/features/QuizRecommend";
+import { Quiz } from "@/widgets/Quiz/ui/Quiz";
 
 export const HomePage = () => {
   return (
@@ -51,7 +52,7 @@ export const HomePage = () => {
 
       <section className='pt-15 pb-15' id="product_selection">
         <div className="container">
-          <GoodsForYouQuiz />
+          <Quiz />
         </div>
       </section>
 

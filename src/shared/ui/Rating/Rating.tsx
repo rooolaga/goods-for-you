@@ -4,7 +4,7 @@ import Star from '../../assets/icons/star.svg?react'
 import { Icon } from "../Icon";
 import { range } from 'lodash'
 
-interface RatingProps {
+export interface RatingProps {
   className?: string,
   value: 0 | 1 | 2 | 3 | 4 | 5;
 }
